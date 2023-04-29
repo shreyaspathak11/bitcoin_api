@@ -54,7 +54,7 @@ const Coins = () => {
                     <HStack>
                         <Radio value={"inr"}>INR</Radio>
                         <Radio value={"usd"}>USD</Radio>
-                          
+                        <Radio value={"eur"}>EUR</Radio>  
                     </HStack>
                 </RadioGroup>
 
@@ -78,7 +78,7 @@ const Coins = () => {
                             <Button
                               key={index}
                               bgColor={"blackAlpha.400"}
-                              Color={"white"}
+                              color={"white"}
                               _hover={{bgColor: "blackAlpha.500"}}
                               onClick={() => changePage(index + 1)}
                             >
