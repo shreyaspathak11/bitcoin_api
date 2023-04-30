@@ -150,10 +150,10 @@ const CoinDetails = () => {
             <Chart arr={chartArray} currency={currencySymbol} days={days} />
           </Box>
 
-          <HStack p="4" overflowX={"flex"} wrap={"wrap"} justifyContent={"space-evenly"}>
+          <HStack wrap={"wrap"} justifyContent={"space-evenly"} position={"relative"} centerContent>
  
             {btns.map((i) => (
-              <Button colorScheme='teal' variant='outline' display={"flex"} justifyContent={"space-evenly"} alignItems={"center"} 
+              <Button colorScheme='teal' variant='outline' centerContent 
               css={{"&:hover":{ transform: "scale(1.5)" }}}
 
                 disabled={days === i}
