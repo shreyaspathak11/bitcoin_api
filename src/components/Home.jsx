@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Flex, Heading, Text, Button, Image,} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Hero from '../assets/increase.png'
+import Carousel from './Carasol';
 
 const Home = () => {
   return (
@@ -98,6 +99,7 @@ const Home = () => {
         
       </Box>
     </Flex>
+    <Carousel />
     </>
   )
 }
