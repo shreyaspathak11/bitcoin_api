@@ -1,22 +1,27 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import SwiperCore, { Pagination } from 'swiper/core';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import SwiperCore, { Autoplay, Pagination } from 'swiper';
+import Img0 from '../images/Caraousel.jpg';
+import Img1 from '../images/Carousel1.jpg';
+import Img2 from '../images/Carousel 2.jpg';
 
 SwiperCore.use([Pagination]);
 
 function Carousel() {
   return (
     <Box maxW="6xl" marginX="auto" mt={8}>
-      <Swiper pagination={true}>
+      <Swiper pagination={true}
+      autoplay={{ delay: 2000 }}
+      >
         <SwiperSlide>
           <Flex
             bg="gray.100"
             h="lg"
             justify="center"
             align="center"
-            backgroundImage="url('https://via.placeholder.com/1200x600')"
+            backgroundImage={Img2}
             backgroundSize="cover"
             backgroundPosition="center"
           >
@@ -36,7 +41,7 @@ function Carousel() {
             h="lg"
             justify="center"
             align="center"
-            backgroundImage="url('https://via.placeholder.com/1200x600')"
+            backgroundImage={Img0}
             backgroundSize="cover"
             backgroundPosition="center"
           >
@@ -56,7 +61,7 @@ function Carousel() {
             h="lg"
             justify="center"
             align="center"
-            backgroundImage="url('https://via.placeholder.com/1200x600')"
+            backgroundImage={Img1}
             backgroundSize="cover"
             backgroundPosition="center"
           >
