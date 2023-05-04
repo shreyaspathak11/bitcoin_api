@@ -25,17 +25,17 @@ function Hero() {
       <Box w={{ base: 'full', md: '50%' }} pr={{ md: '8' }}>
         <Heading
           as="h1"
-          size="xl"
+          size="4xl"
           fontWeight="extrabold"
           lineHeight="shorter"
           mb="6"
+          color="#FCE22A"
+          fontFamily={"Alkatra"}
         >
           Welcome to BitBazaar
         </Heading>
-        <Text fontSize="lg" mb="8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod,
-          diam vel convallis lacinia, ante metus rutrum nisi, nec blandit
-          lorem neque non arcu.
+        <Text fontSize="lg" mb="8" size="2xl" color="#27E1C1" fontFamily={"Alkatra"}>
+          Your one-stop shop for learning and trading in Cryptocurrencies.
         </Text>
         <Flex direction={{ base: 'column', md: 'row' }} spacing="4">
           <Button colorScheme="teal" size="lg" >

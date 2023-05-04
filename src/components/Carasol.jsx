@@ -27,10 +27,10 @@ function Carousel() {
             backgroundPosition="center"
           >
             <Box textAlign="center" >
-              <Heading as="h2" size="4xl"  mb={4} color={'blackAlpha.800'}>
+              <Heading as="h2" size="4xl"  mb={4} color={'blackAlpha.800'} fontFamily={"Alkatra"} >
                 Welcome to BitBazaar
               </Heading>
-              <Text fontSize="2xl" fontWeight="semibold" color={'blackAlpha.800'}>
+              <Text fontSize="3xl" fontWeight="semibold" color={'blackAlpha.800'} fontFamily={"Alkatra"}>
                 Your one-stop shop for all things Bitcoin.
               </Text>
             </Box>
@@ -47,10 +47,10 @@ function Carousel() {
             backgroundPosition="center"
           >
             <Box textAlign="top">
-              <Heading as="h2" size="4xl" mb={3} color={'whiteAlpha.800'}>
+              <Heading as="h2" size="4xl" mb={3} color={"#FCE22A"} fontFamily={"Alkatra"} >
                 Invest in Bitcoin
               </Heading>
-              <Text fontSize="2xl" fontWeight="semibold" color={'whiteAlpha.800'}>
+              <Text fontSize="3xl" fontWeight="semibold" color={"#FCE22A"} fontFamily={"Alkatra"}>
                 Discover the benefits of investing in Bitcoin.
               </Text>
             </Box>
@@ -67,10 +67,10 @@ function Carousel() {
             backgroundPosition="center"
           >
             <Box textAlign="center">
-              <Heading as="h2" size="4xl" mb={4} color={'whiteAlpha.800'}>
+              <Heading as="h2" size="4xl" mb={4} fontFamily={"Alkatra"} color={'whiteAlpha.800'}>
                 Trade with Confidence
               </Heading>
-              <Text fontSize="2xl" fontWeight="semibold" color={'whiteAlpha.800'}>
+              <Text fontSize="3xl" fontWeight="semibold" color={'whiteAlpha.800'} fontFamily={"Alkatra"}>
                 Buy, sell, and trade Bitcoin like a pro with BitBazaar.
               </Text>
             </Box>

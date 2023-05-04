@@ -4,6 +4,7 @@ import {
   Flex,
   Button,
   Image,
+  Text,
   useDisclosure,
   Drawer,
   DrawerOverlay,
@@ -16,6 +17,7 @@ import {
   HStack,
   useColorMode,
   Switch,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
@@ -26,6 +28,9 @@ function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
 
+  const bg = useColorModeValue('#27E1C1', 'gray.900');
+  const textColor = useColorModeValue('gray.600', 'gray.400');
+  const borderColor = useColorModeValue('gray.200', 'gray.600');
   // handle window resize to toggle isMobile state
   window.addEventListener("resize", () => {
     if (window.innerWidth < 768) {
@@ -36,9 +41,11 @@ function Navbar() {
   });
 
   return (
-    <Flex align="center" justify="space-between" p={4} bgColor={"#27E1C1"} boxShadow={"xl"}>
+    <Flex align="center" justify="space-between" p={4} bgColor={bg} boxShadow={"xl"} textColor={textColor} borderColor={borderColor}>
       <Box>
         <Image src={logo} alt="logo" boxSize="50px" css={{ "&:hover": { transform: "scale(1.05)", boxShadow: "xl", }, }} />
+        <Box> <Text fontSize="sm" fontWeight="bold" fontFamily={"Alkatra"}>BitBazaar</Text>
+        </Box>
       </Box>
 
       {/* Mobile view */}

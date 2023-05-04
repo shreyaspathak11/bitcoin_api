@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Coins from "./components/Coins";
 import CoinDetails from "./components/CoinDetails";
 import Exchanges from "./components/Exchanges";
@@ -15,6 +16,7 @@ function App() {
         <Route path="/coins/:coinId" element={<CoinDetails />} />
         <Route path="/exchanges" element={<Exchanges />} />
       </Routes>
+      <Footer />
     </Router>
     
   );
