@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Flex, Heading, Text, Button, Image } from "@chakra-ui/react";
 import graphics1 from "../assets/graphics1.png";
 import graphics2 from "../assets/graphics2.png";
+import { Link } from "react-router-dom";
 
 
 function CreativeSection() {
@@ -36,7 +37,9 @@ function CreativeSection() {
             alignItems={"center"}
             _hover={{ bg: "white", color: "teal.500", transform: "scale(1.05)",boxShadow: "xl"}}
           >
+            <Link to="/register">
             Get Started
+            </Link>
           </Button>
         </Box>
         <Image

@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 
 import heroImage from '../assets/growth.png';
+import { Link } from 'react-router-dom';
 
 
 function Hero() {
@@ -40,8 +41,10 @@ function Hero() {
           Your one-stop shop for learning and trading in Cryptocurrencies.
         </Text>
         <Flex direction={{ base: 'column', md: 'row' }} spacing="4">
-          <Button colorScheme="teal" size="lg" _hover={{ transform:"scale(1.05)", colorScheme:"Yellow"}}>
+          <Button colorScheme="teal" size="lg" _hover={{ transform:"scale(1.05)", colorScheme:"Yellow"}} >
+          <Link to="/register">
             Get Started
+            </Link>
           </Button>
 
         </Flex>
