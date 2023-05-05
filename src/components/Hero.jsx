@@ -8,7 +8,8 @@ import {
   Image,
 } from '@chakra-ui/react';
 
-import heroImage from '../assets/crypto.png';
+import heroImage from '../assets/growth.png';
+
 
 function Hero() {
   return (
