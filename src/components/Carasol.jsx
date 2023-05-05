@@ -27,10 +27,10 @@ function Carousel() {
             backgroundPosition="center"
           >
             <Box textAlign="center" >
-              <Heading as="h2" size="4xl"  mb={4} color={'blackAlpha.800'} fontFamily={"Alkatra"} >
+              <Heading as="h2" size="4xl"  mb={4} color={'blackAlpha.800'} fontFamily={"Alkatra"} _hover={{ color: "Yellow", transform: "scale(1.05)"}}>
                 Welcome to BitBazaar
               </Heading>
-              <Text fontSize="3xl" fontWeight="semibold" color={'blackAlpha.800'} fontFamily={"Alkatra"}>
+              <Text fontSize="3xl" fontWeight="semibold" color={'blackAlpha.800'} fontFamily={"Alkatra"} _hover={{ color: "Yellow", transform: "scale(1.05)"}}>
                 Your one-stop shop for all things Bitcoin.
               </Text>
             </Box>
@@ -47,10 +47,10 @@ function Carousel() {
             backgroundPosition="center"
           >
             <Box textAlign="top">
-              <Heading as="h2" size="4xl" mb={3} color={"#FCE22A"} fontFamily={"Alkatra"} >
+              <Heading as="h2" size="4xl" mb={3} color={"#FCE22A"} fontFamily={"Alkatra"} _hover={{ bg: "white", color: "teal.500", transform: "scale(1.05)",boxShadow: "xl"}}>
                 Invest in Bitcoin
               </Heading>
-              <Text fontSize="3xl" fontWeight="semibold" color={"#FCE22A"} fontFamily={"Alkatra"}>
+              <Text fontSize="3xl" fontWeight="semibold" color={"#FCE22A"} fontFamily={"Alkatra"} _hover={{ bg: "white", color: "teal.500", transform: "scale(1.05)",boxShadow: "xl"}}>
                 Discover the benefits of investing in Bitcoin.
               </Text>
             </Box>
@@ -67,10 +67,10 @@ function Carousel() {
             backgroundPosition="center"
           >
             <Box textAlign="center">
-              <Heading as="h2" size="4xl" mb={4} fontFamily={"Alkatra"} color={'whiteAlpha.800'}>
+              <Heading as="h2" size="4xl" mb={4} fontFamily={"Alkatra"} color={'whiteAlpha.800'} _hover={{ color: "Yellow", transform: "scale(1.05)"}}>
                 Trade with Confidence
               </Heading>
-              <Text fontSize="3xl" fontWeight="semibold" color={'whiteAlpha.800'} fontFamily={"Alkatra"}>
+              <Text fontSize="3xl" fontWeight="semibold" color={'whiteAlpha.800'} fontFamily={"Alkatra"} _hover={{ color: "Yellow", transform: "scale(1.05)"}}>
                 Buy, sell, and trade Bitcoin like a pro with BitBazaar.
               </Text>
             </Box>

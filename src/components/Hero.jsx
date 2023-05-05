@@ -8,7 +8,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 
-import heroImage from '../assets/increase.png';
+import heroImage from '../assets/crypto.png';
 
 function Hero() {
   return (
@@ -31,19 +31,18 @@ function Hero() {
           mb="6"
           color="#FCE22A"
           fontFamily={"Alkatra"}
+          _hover={{ transform:"scale(1.05)"}}
         >
           Welcome to BitBazaar
         </Heading>
-        <Text fontSize="lg" mb="8" size="2xl" color="#27E1C1" fontFamily={"Alkatra"}>
+        <Text fontSize="lg" mb="8" size="3xl" color="#27E1C1" fontFamily={"Alkatra"} _hover={{ transform:"scale(1.05)"}}>
           Your one-stop shop for learning and trading in Cryptocurrencies.
         </Text>
         <Flex direction={{ base: 'column', md: 'row' }} spacing="4">
-          <Button colorScheme="teal" size="lg" >
+          <Button colorScheme="teal" size="lg" _hover={{ transform:"scale(1.05)", colorScheme:"Yellow"}}>
             Get Started
           </Button>
-          <Button variant="outline" size="lg">
-            Contact Us
-          </Button>
+
         </Flex>
       </Box>
       <Box
@@ -53,17 +52,10 @@ function Hero() {
         <Image
           src={heroImage}
           alt="hero image"
-          w="full"
-          h="full"
+          w="90%"
+          h="90%"
           objectFit="cover"
-          animate={{
-            translateY: "20px",
-          }}
-          transition={{
-            duration: 0.5,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
+          _hover={{  transform: "scale(1.05)" }}
         />
       </Box>
     </Flex>

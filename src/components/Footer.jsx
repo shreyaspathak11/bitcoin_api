@@ -6,16 +6,16 @@ import {
   Flex,
   Stack,
   IconButton,
-  useColorMode,
+
   useColorModeValue,
 } from '@chakra-ui/react';
 import { FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  
 
-  const bg = useColorModeValue('#27E1C1', 'gray.900');
+  const bg = useColorModeValue('#A5F1E9', 'gray.900');
   const textColor = useColorModeValue('gray.600', 'gray.400');
   const borderColor = useColorModeValue('gray.200', 'gray.600');
 
@@ -28,12 +28,12 @@ const Footer = () => {
           </Text>
           <Stack mt={2} direction="row" spacing={4}>
             <Link to="/coins">
-              <Text fontSize="sm" _hover={{ color: 'blue.400' }}>
+              <Text fontSize="lg" _hover={{ color: 'white', transform: "scale(1.05)",boxShadow: "xl" }}>
                 Coins
               </Text>
             </Link>
             <Link to="/exchanges">
-              <Text fontSize="sm" _hover={{ color: 'blue.400' }}>
+              <Text fontSize="lg" _hover={{ color: 'White', transform: "scale(1.05)",boxShadow: "xl" }}>
                 Exchanges
               </Text>
             </Link>
@@ -47,6 +47,7 @@ const Footer = () => {
             icon={<FaTwitter />}
             size="md"
             variant="ghost"
+            _hover={{ bg: "white", color: "teal.500", transform: "scale(1.05)",boxShadow: "xl"}}
             onClick={() => window.open('https://twitter.com/')}
           />
           <IconButton
@@ -54,6 +55,7 @@ const Footer = () => {
             icon={<FaInstagram />}
             size="md"
             variant="ghost"
+            _hover={{ bg: "white", color: "teal.500", transform: "scale(1.05)",boxShadow: "xl"}}
             onClick={() => window.open('https://www.instagram.com/')}
           />
           <IconButton
@@ -61,10 +63,11 @@ const Footer = () => {
             icon={<FaLinkedin />}
             size="md"
             variant="ghost"
+            _hover={{ bg: "white", color: "teal.500", transform: "scale(1.05)",boxShadow: "xl"}}
             onClick={() => window.open('https://www.linkedin.com/')}
           />
           <Stack direction="column" spacing={0} justify="center">
-            <Text fontSize="sm">Stay up to date</Text>
+            <Text fontSize="lg">Stay up to date</Text>
             <Box
               as={Link}
               to="/subscribe"
@@ -78,7 +81,7 @@ const Footer = () => {
               fontWeight="bold"
               textAlign="center"
               transition="0.2s"
-              css={{"&:hover": { boxShadow: 'lg'} }}
+              css={{"&:hover": { transform: "scale(1.05)",boxShadow: "xl" }}}
             >
               Subscribe
             </Box>

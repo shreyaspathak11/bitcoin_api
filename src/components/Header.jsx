@@ -28,7 +28,7 @@ function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const bg = useColorModeValue('#27E1C1', 'gray.900');
+  const bg = useColorModeValue('#9DF1DF', 'gray.900');
   const textColor = useColorModeValue('gray.600', 'gray.400');
   const borderColor = useColorModeValue('gray.200', 'gray.600');
   // handle window resize to toggle isMobile state

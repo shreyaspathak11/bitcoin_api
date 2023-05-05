@@ -5,6 +5,8 @@ import Coins from "./components/Coins";
 import CoinDetails from "./components/CoinDetails";
 import Exchanges from "./components/Exchanges";
 import Home from "./components/Home";
+import SignIn from "./components/SignIn";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/coins" element={<Coins />} />
         <Route path="/coins/:coinId" element={<CoinDetails />} />
         <Route path="/exchanges" element={<Exchanges />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
       <Footer />
     </Router>

@@ -98,12 +98,7 @@ const Coins = () => {
 const CoinCard = ({id, name, img, price, symbol, currency_symbol= "₹" }) => (
     <Link to={`/coins/${id}`} >     {/* target={"blank"} opens the link in same tab hence no wastage of tabs */}
     <VStack w={"52"} shadow={"lg"} p={"8"} borderRadius={"lg"} transition={"all 0.3s"} m={"4"}
-    css={{
-        "&:hover": {
-            transform: "scale(1.05)",
-            boxShadow: "xl",
-        },
-    }}>
+    css={{"&:hover": {transform: "scale(1.05)",boxShadow: "xl",},}}>
         <Image
             src={img}
             alt={"Coins"}
