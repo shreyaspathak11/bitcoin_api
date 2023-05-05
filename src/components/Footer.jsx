@@ -20,7 +20,7 @@ const Footer = () => {
   const borderColor = useColorModeValue('gray.200', 'gray.600');
 
   return (
-    <Box bg={bg} color={textColor} borderTopWidth="1px" borderColor={borderColor}>
+    <Box bg={bg} color={textColor} borderTopWidth="1px" borderColor={borderColor} fontFamily={"Alkatra"}>
       <Container as={Flex} maxW="7xl" py="6" direction={{ base: 'column', md: 'row' }}>
         <Box flex="1">
           <Text fontSize="sm" fontWeight="bold">
