@@ -11,12 +11,14 @@ import {
   Link,
   Button,
   useColorModeValue,
+  VStack,
 } from '@chakra-ui/react';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 
 const Register = () => {
   const bgGradient = useColorModeValue('linear(to-r, teal.200, green.200)', 'gray.700');
   const textColor = useColorModeValue('gray.800', 'white');
+  const bg = useColorModeValue('white', 'gray.800');
 
   return (
     <Flex align="center" justify="center" minH="100vh" bgGradient={bgGradient}>
@@ -25,11 +27,12 @@ const Register = () => {
         borderWidth="1px"
         borderRadius="lg"
         p="6"
-        bg="white"
+        bg={bg}
         boxShadow="md"
+        textColor={textColor}
       >
         <Box mb="6" textAlign="center">
-          <Heading size="lg" fontWeight="bold">
+          <Heading size="lg" fontWeight="bold" textColor={"teal.500"}>
             Register
           </Heading>
           <Text fontSize="sm">Please fill in the form to create your account.</Text>
@@ -37,15 +40,15 @@ const Register = () => {
         <form>
           <FormControl id="firstName" isRequired>
             <FormLabel>First Name</FormLabel>
-            <Input type="text" placeholder="John" />
+            <Input type="text" placeholder="Shreyas" />
           </FormControl>
           <FormControl id="lastName" mt="4" isRequired>
             <FormLabel>Last Name</FormLabel>
-            <Input type="text" placeholder="Doe" />
+            <Input type="text" placeholder="Pathak" />
           </FormControl>
           <FormControl id="email" mt="4" isRequired>
             <FormLabel>Email address</FormLabel>
-            <Input type="email" placeholder="johndoe@example.com" />
+            <Input type="email" placeholder="shreyas@example.com" />
           </FormControl>
           <FormControl id="password" mt="4" isRequired>
             <FormLabel>Password</FormLabel>
@@ -54,7 +57,7 @@ const Register = () => {
           <FormControl mt="4" display="flex" alignItems="center">
             <Checkbox defaultIsChecked>
               I agree to the{' '}
-              <Link color="teal.500" href="#" isExternal>
+              <Link color="teal.500" href="./terms" >
                 Terms and Conditions
               </Link>
             </Checkbox>
@@ -66,12 +69,11 @@ const Register = () => {
         <Text mt="8" textAlign="center" fontWeight="bold">
           OR
         </Text>
-        <Flex align="center" justify="center" mt="6">
+        <VStack align="center" justify="center" mt="6">
           <Button
             leftIcon={<FaFacebook />}
             colorScheme="facebook"
             size="lg"
-            mr="4"
             variant="outline"
             fontWeight="medium"
           >
@@ -86,7 +88,7 @@ const Register = () => {
           >
             Register with Google
           </Button>
-        </Flex>
+        </VStack>
       </Box>
     </Flex>
   );

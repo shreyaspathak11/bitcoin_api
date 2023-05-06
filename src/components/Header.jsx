@@ -43,8 +43,11 @@ function Navbar() {
   return (
     <Flex align="center" justify="space-between" p={4} bgColor={bg} boxShadow={"xl"} textColor={textColor} borderColor={borderColor}>
       <Box>
+      <Link to={"/"}>
         <Image src={logo} alt="logo" boxSize="50px" css={{ "&:hover": { transform: "scale(1.05)", boxShadow: "xl", }, }} />
-        <Box> <Text fontSize="sm" fontWeight="bold" fontFamily={"Alkatra"}>BitBazaar</Text>
+      </Link>
+        <Box> 
+        <Text fontSize="sm" fontWeight="bold" fontFamily={"Alkatra"}>BitBazaar</Text>
         </Box>
       </Box>
 
@@ -63,7 +66,6 @@ function Navbar() {
                   <Button variant="ghost" onClick={onClose}><Link to="/">Home</Link></Button>
                   <Button variant="ghost" onClick={onClose}><Link to="/coins">Coins</Link></Button>
                   <Button variant="ghost" onClick={onClose}><Link to="/exchanges">Exchange</Link></Button>
-                  <Button variant="ghost" onClick={onClose}><Link to="/signin">Sign in</Link></Button>
                   <Button variant="solid" color="#27E1C1"><Link to="/register">Register</Link></Button>
                 </VStack>
               </DrawerBody>
@@ -76,7 +78,6 @@ function Navbar() {
           <Button variant="ghost"><Link to="/">Home</Link></Button>
           <Button variant="ghost"><Link to="/coins">Coins</Link></Button>
           <Button variant="ghost"><Link to="/exchanges">Exchange</Link></Button>
-          <Button variant="ghost"><Link to="/signin">Sign in</Link></Button>
           <Button variant="solid" color="#27E1C1"><Link to="/register">Register</Link></Button>
           <Switch colorScheme="teal" isChecked={colorMode === "dark"} onChange={toggleColorMode} />
         </HStack>

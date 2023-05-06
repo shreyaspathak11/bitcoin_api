@@ -83,7 +83,9 @@ const Footer = () => {
               transition="0.2s"
               css={{"&:hover": { transform: "scale(1.05)",boxShadow: "xl" }}}
             >
+            <Link to="./newsletter">
               Subscribe
+              </Link>
             </Box>
           </Stack>
         </Stack>
