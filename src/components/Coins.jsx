@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { server } from '../index'
-import { Container, HStack, Heading, VStack, Image, Text, Button, RadioGroup, Radio } from '@chakra-ui/react'
+import { Container, HStack, Heading, VStack, Image, Text, Button, RadioGroup, Radio, useColorModeValue, Box } from '@chakra-ui/react'
 import Loader from './Loader'
 import Error from './Error'
 import { Link } from 'react-router-dom'
 
 const Coins = () => {
+    const bgGradient = useColorModeValue('linear(to-r, teal.200, green.200)', 'gray.700');
+    const textColor = useColorModeValue('gray.600', 'gray.400');
+
     
     const [coins, setCoins] = useState([])
     const [error, setError] = useState(false)
@@ -45,7 +48,8 @@ const Coins = () => {
     
     else{
     return (
-        <Container maxW={"container.xl"} centerContent>
+        <Box bgGradient={bgGradient} textColor={textColor}>
+        <Container maxW={"container.xl"} centerContent >
             { loading ? ( 
                 <Loader /> 
                 ) : (
@@ -91,6 +95,7 @@ const Coins = () => {
 
             )}
         </Container>
+        </Box>
     );  
 }
 }
