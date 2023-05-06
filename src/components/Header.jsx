@@ -67,6 +67,7 @@ function Navbar() {
                   <Button variant="ghost" onClick={onClose}><Link to="/coins">Coins</Link></Button>
                   <Button variant="ghost" onClick={onClose}><Link to="/exchanges">Exchange</Link></Button>
                   <Button variant="solid" color="#27E1C1"><Link to="/register">Register</Link></Button>
+                  <Switch colorScheme="teal" isChecked={colorMode === "dark"} onChange={toggleColorMode} />
                 </VStack>
               </DrawerBody>
             </DrawerContent>
