@@ -1,13 +1,16 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Button, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Button, Image, useColorModeValue} from "@chakra-ui/react";
 import graphics1 from "../assets/graphics1.png";
 import graphics2 from "../assets/graphics2.png";
 import { Link } from "react-router-dom";
 
 
 function CreativeSection() {
+  const bgGradient = useColorModeValue('linear(to-r, teal.200, green.200)', 'gray.700');
+  const textColor = useColorModeValue('gray.600', 'gray.400');
+
   return (
-    <Box py={10} bgGradient="linear(to-r, #2D3748, #1A202C)" fontFamily={"Alkatra"}>
+    <Box py={10} bgGradient={bgGradient} fontFamily={"Alkatra"} textColor={textColor}>
       <Flex
         maxW="100%"
         mx="auto"
@@ -26,10 +29,10 @@ function CreativeSection() {
           css={{"&:hover": {transform: "scale(1.05)",boxShadow: "xl",},}}
         />
         <Box maxW="500px" mb={{ base: 8, md: 0 }} textAlign="center">
-          <Heading size="2xl" color="white" mb={4} fontFamily={"Alkatra"} css={{"&:hover": {color:"teal", transform: "scale(1.05)",boxShadow: "xl",},}}>
+          <Heading size="2xl"  mb={4} fontFamily={"Alkatra"} css={{"&:hover": {color:"teal", transform: "scale(1.05)",boxShadow: "xl",},}}>
             Trade with Confidence
           </Heading>
-          <Text size="xl" color="gray.300" mb={8} css={{"&:hover": {transform: "scale(1.05)",boxShadow: "xl",},}}>
+          <Text size="xl"  mb={8} css={{"&:hover": {transform: "scale(1.05)",boxShadow: "xl",},}}>
           At BitBazaar, we take pride in providing a secure and user-friendly trading environment that empowers traders of all levels
           </Text>
           <Button

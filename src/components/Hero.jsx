@@ -6,6 +6,7 @@ import {
   Heading,
   Text,
   Image,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 import heroImage from '../assets/growth.png';
@@ -13,6 +14,9 @@ import { Link } from 'react-router-dom';
 
 
 function Hero() {
+  const bgGradient = useColorModeValue('linear(to-r, teal.200, green.200)', 'gray.700');
+  const textColor = useColorModeValue('gray.600', 'gray.400');
+
   return (
     <Flex
       align="center"
@@ -21,7 +25,7 @@ function Hero() {
       h={{ base: 'auto', md: '80vh' }}
       py={{ base: '6', md: '16' }}
       px={{ base: '4', md: '16', lg: '32' }}
-      bgGradient="linear(to-b, #1A202C, #2D3748)"
+      bgGradient={bgGradient}
       color="white"
     >
       <Box w={{ base: 'full', md: '50%' }} pr={{ md: '8' }}>
@@ -37,7 +41,7 @@ function Hero() {
         >
           Welcome to BitBazaar
         </Heading>
-        <Text fontSize="lg" mb="8" size="3xl" color="#27E1C1" fontFamily={"Alkatra"} _hover={{ transform:"scale(1.05)"}}>
+        <Text fontSize="lg" mb="8" size="3xl" textColor={textColor} fontFamily={"Alkatra"} _hover={{ transform:"scale(1.05)"}}>
           Your one-stop shop for learning and trading in Cryptocurrencies.
         </Text>
         <Flex direction={{ base: 'column', md: 'row' }} spacing="4">

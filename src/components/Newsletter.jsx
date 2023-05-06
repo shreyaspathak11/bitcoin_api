@@ -26,7 +26,7 @@ function Newsletter() {
 
   const bgGradient = useColorModeValue('linear(to-r, teal.200, green.200)', 'gray.700');
   const textColor = useColorModeValue('Teal', 'white');
-  const bg = useColorModeValue('white', 'gray.800');
+  const bg = useColorModeValue('linear(to-r, teal.200, green.200)', 'gray.800');
 
   return (
 

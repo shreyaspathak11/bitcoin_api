@@ -1,4 +1,4 @@
-import {  Badge,  Box, Button, Container,  HStack,  Image, Progress,  Radio,  RadioGroup,  Stat,  StatArrow,  StatHelpText,  StatLabel,  StatNumber, Text,  VStack,} from "@chakra-ui/react";
+import {  Badge,  Box, Button, Container,  HStack,  Image, Progress,  Radio,  RadioGroup,  Stat,  StatArrow,  StatHelpText,  StatLabel,  StatNumber, Text,  VStack, useColorModeValue,} from "@chakra-ui/react";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -8,6 +8,8 @@ import Loader from "./Loader";
 import Error from "./Error";
 
 const CoinDetails = () => {
+  const bgGradient = useColorModeValue('linear(to-r, teal.200, green.200)', 'gray.700');
+
   const params = useParams();
   const [coin, setCoin] = useState({});
   const [loading, setLoading] = useState(true);
@@ -15,6 +17,8 @@ const CoinDetails = () => {
   const [currency, setCurrency] = useState("inr");
   const [days, setDays] = useState("24h");
   const [chartArray, setChartArray] = useState([]);
+
+  
 
   const currencySymbol =
   currency === "inr" ? "₹" : currency === "eur" ? "€" : "$";
@@ -86,7 +90,8 @@ const CoinDetails = () => {
   if (error) return <Error />;
 
   return (
-    <Container maxW={"container.xl"}>
+    <Box bgGradient={bgGradient} minH={"100vh"}>
+    <Container maxW={"container.xl"} >
       {loading ? (
         <Loader />
       ) : (
@@ -188,6 +193,7 @@ const CoinDetails = () => {
         </>
       )}
     </Container>
+  </Box>
   );
 };
 
